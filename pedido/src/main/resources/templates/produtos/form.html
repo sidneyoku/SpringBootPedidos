@@ -19,9 +19,12 @@
 			<input type="hidden" id="id" th:field="*{id}">
 			
 			<input type="text" th:field="*{nome}" placeholder="Nome" class="form-control mb-4 col-4">
+      	
       		<input type="date" th:field="*{dataCadastro}" placeholder="Data Cadastro" class="form-control mb-4 col-4">
-      		
+      	
       		<input type="text" th:field="*{descricao}" placeholder="Descrição" class="form-control mb-4 col-4">
+      		
+      		<input type="text" th:field="*{valor}" placeholder="Valor" class="form-control mb-4 col-4">
       				
 			<button type="submit" class="btn btn-info col-2">Salvar</button>
 		</form>

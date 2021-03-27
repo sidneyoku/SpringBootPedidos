@@ -42,11 +42,13 @@ public class PopulacaoInicialBanco implements CommandLineRunner {
 		prod1.setNome("Bolo de cenoura");
 		prod1.setDescricao("Feito com pouco açúcar com cobertura de chocolate.");
 		prod1.setDataCadastro(LocalDate.now());
+		prod1.setValor(3.30);
 		
 		Produto prod2 = new Produto();
 		prod2.setNome("Pudim");
 		prod2.setDescricao("Feito com leite zero lactose.");
 		prod2.setDataCadastro(LocalDate.now());
+		prod2.setValor(5.20);
 		
 		produtoRepositorio.save(prod1);
 		produtoRepositorio.save(prod2);

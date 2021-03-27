@@ -22,6 +22,7 @@
 					<th>Nome</th>
 					<th>Descrição</th>
 					<th>Data Cadastro</th>
+					<th>Valor</th>
 					<!-- <th>Departamento</th> -->
 					<th>Ações</th>
 				</tr>
@@ -31,7 +32,10 @@
 					<td th:text="${produto.nome}"></td>
 					<td th:text="${produto.descricao}"></td>
 					<td th:text="${produto.dataCadastro}"></td>
-					<!--  <td th:text="${pessoa.departamento}"></td> -->
+					<!-- <td th:text="${#numbers.formatCurrency(produto.valor)}">R$ 3.560,70</td> -->
+					<td th:text="${#strings.replace(#numbers.formatCurrency(produto.valor), '.00', '')}">R$ 3.560,70</td>
+					
+					 
 					<td>
 						<a th:href="@{/produtos/{id}(id=${produto.id})}" class="btn btn-primary">Alterar</a>
 						<a th:href="@{/produtos/excluir/{id}(id=${produto.id})}" class="btn btn-danger">Excluir</a>			

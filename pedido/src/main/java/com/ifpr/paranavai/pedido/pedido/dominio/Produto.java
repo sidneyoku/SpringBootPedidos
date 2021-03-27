@@ -1,5 +1,6 @@
 package com.ifpr.paranavai.pedido.pedido.dominio;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -22,6 +23,8 @@ public class Produto {
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataCadastro;
+	
+	private double valor;
 	
 	/*
 	 * @ManyToOne private Pedido pedido;
@@ -61,12 +64,14 @@ public class Produto {
 		this.dataCadastro = dataCadastro;
 	}
 	
-	/*
-	 * public Pedido getPedido() { return pedido; }
-	 * 
-	 * public void setPedido(Pedido pedido) { this.pedido = pedido; }
-	 */
-
+	public double getValor() {
+		return valor;
+	}
+	
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
